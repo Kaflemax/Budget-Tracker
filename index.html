@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everest Budget Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Everest Budget Tracker</h1>
+
+        <!-- Balance Section -->
+        <div class="balance">
+            <h2>Total Balance</h2>
+            <p id="totalBalance">$0.00</p>
+            <button type="button" onclick="toggleBalance()">Toggle Balance</button>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary">
+            <div class="income">
+                <h3>Income</h3>
+                <p id="totalIncome">$0.00</p>
+            </div>
+            <div class="expense">
+                <h3>Expense</h3>
+                <p id="totalExpense">$0.00</p>
+            </div>
+        </div>
+
+        <!-- Add Transaction Section -->
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <div class="radio-buttons">
+                <label>
+                    <input type="radio" name="type" value="income" checked> Income
+                </label>
+                <label>
+                    <input type="radio" name="type" value="expense"> Expense
+                </label>
+            </div>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <!-- Transaction History Section -->
+        <h2>History</h2>
+        <ul id="transactionList"></ul> <!-- fixed ID to match JS -->
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

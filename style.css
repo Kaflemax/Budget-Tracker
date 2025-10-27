@@ -1,0 +1,164 @@
+
+/* General Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Main Heading */
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Balance Section Styling */
+.balance h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#totalBalance {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Summary Section Styling (Income/Expense) */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.income, .expense {
+    text-align: center;
+}
+
+.income h3, .expense h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#totalIncome {
+    color: #28a745;
+    font-weight: bold;
+}
+
+#totalExpense {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Transaction Form Styling */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Radio Button Styling */
+.radio-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+/* Submit Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Transaction List Styling */
+#transactionList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#transactionList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#transactionList .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#transactionList .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #totalBalance {
+        font-size: 24px;
+    }
+
+    input[type="text"], input[type="number"] {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .income, .expense {
+        margin-bottom: 10px;
+    }
+}
